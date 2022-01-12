@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+ stages {
+    stage('Build branch') {
+            
+            steps {
+                echo 'Build is successful'
+            }
+        }
+        stage('Test branch'){
+            
+            steps{
+                echo"Testing is successful"
+            }
+        }
+        stage('deploy branch'){
+            
+            steps{
+                echo"Deployment is successful"
+            }
+        }
+    }
+}
