@@ -11,4 +11,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Run a one-line script
-       run: echo Hello, Leela, How, are, you!!
+       run: echo Hello, Leela How are you!!
