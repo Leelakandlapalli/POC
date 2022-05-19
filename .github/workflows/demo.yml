@@ -9,6 +9,6 @@ on:
 jobs:
  build:
    runs-on: ubuntu-latest
-   steps
+   steps:
      - name: Run a one-line script
        run: echo Hello, Leela, How, are, you!!
