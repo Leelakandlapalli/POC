@@ -1,0 +1,14 @@
+name: CI
+on:
+ push: 
+   Branches: [Leelakandlapalli-patch-1]
+ pull_request:
+   Branches: [Leelakandlapalli-patch-1]
+ 
+ workflow_dispatch:
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps
+     - name: Run a one-line script
+       run: echo Hello, Leela, How, are, you!!
