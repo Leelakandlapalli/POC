@@ -1,0 +1,26 @@
+name: Digital order vlab Pipeline
+
+on:
+   workflow_dispatch:
+   inputs:
+     vlabconfig_list: 
+       description: 'Choose vlab configuration from the list.'
+       type: choice
+       options:
+        - AU_DUAL_LANE
+        - CA_DUAL_LANE
+        - DE_DUAL_LANE
+        - US_DUAL_LANE
+        - UK_DUAL_LANE
+        - AU_DUAL_LANE_LAPTOPLOAD
+        - CA_DUAL_LANE_LAPTOPLOAD
+        - DE_DUAL_LANE_LAPTOPLOAD
+        - US_DUAL_LANE_LAPTOPLOAD
+        - UK_DUAL_LANE_LAPTOPLOAD
+        - DE_PRODUCTION_PROD_PIPELINE
+      
+jobs:
+
+CreateLab:
+   runs-on: [ ]
+   
