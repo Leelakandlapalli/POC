@@ -1,27 +1,16 @@
-name: Digital order vlab Pipeline
-
-on: 
-  workflow_dispatch:
-    inputs:
-     vlabconfig_list: 
-       description: 'Choose vlab configuration from the list.'
-       required: true
-       type: choice
-       options:
-        - AU_DUAL_LANE
-        - CA_DUAL_LANE
-        - DE_DUAL_LANE
-        - US_DUAL_LANE
-        - UK_DUAL_LANE
-        - AU_DUAL_LANE_LAPTOPLOAD
-        - CA_DUAL_LANE_LAPTOPLOAD
-        - DE_DUAL_LANE_LAPTOPLOAD
-        - US_DUAL_LANE_LAPTOPLOAD
-        - UK_DUAL_LANE_LAPTOPLOAD
-        - DE_PRODUCTION_PROD_PIPELINE
-      
+name: Check rules
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
 jobs:
-
-CreateLab:
-   runs-on: [ ]
-   
+    your_npm_job_name:
+        steps:
+          - uses: actions/checkout@v2
+          - uses: actions/setup-node@v2
+             with:
+              node-version: '12'
+              check-latest: true
+          - run: npm install
+          - run: npm check-rules
