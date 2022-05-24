@@ -1,26 +1,65 @@
-name: Digital order vlab Pipeline
+name: Lab Pipeline
 
-on:
+on: 
    workflow_dispatch:
-  
-     vlabconfig_list: 
-       description: 'Choose vlab configuration from the list.'
-       type: choice
-       options:
-        - AU_DUAL_LANE
-        - CA_DUAL_LANE
-        - DE_DUAL_LANE
-        - US_DUAL_LANE
-        - UK_DUAL_LANE
+    inputs:
+      vlabconfig_list:
+        description: 'Choose Vlab configuration from the list.'     
+        required: false
+        default: 'NOT_IN_LIST'
+        type: choice
+        options:
+        - NOT_IN_LIST
         - AU_DUAL_LANE_LAPTOPLOAD
+        - AU_DUAL_LANE_PIPELINE
+        - AU_DUAL_LANE_PROD_PIPELINE
+        - AU_DUAL_LANE_PROD_TEMP
+        - AU_POC
+        - AU_SINGLE_LANE_PIPELINE
+        - AU_TEST_DUAL_LANE_PROD_PIPELINE
+        - CA_DUAL_LANE_ENGLISH_PROD_PIPELINE
+        - CA_DUAL_LANE_ENG_PROD_PIPELINE
+        - CA_DUAL_LANE_FRENCH_PROD_PIPELINE
         - CA_DUAL_LANE_LAPTOPLOAD
+        - CA_DUAL_LANE_PROD_PIPELINE
+        - CA_SINGLE_LANE
+        - CA_TRADITIONAL
+        - CA_TRADITIONAL_PIPELINE
+        - CN_APLHA_STORE
+        - CN_KVS_ZERO
+        - DE_DUAL_LANE
         - DE_DUAL_LANE_LAPTOPLOAD
-        - US_DUAL_LANE_LAPTOPLOAD
+        - DE_DUAL_LANE_PIPELINE
+        - DE_DUAL_LANE_PROD_PIPELINE
+        - DE_DUAL_LANE_PROD_TEMP
+        - DE_DUAL_LANE_StorepaketEVP
+        - DE_DUAL_LANE_StorepaketFundP
+        - DE_KVS_ZERO_MFY
+        - DE_SINGLE_LANE
+        - TSS_DUAL_LANE_PIPELINE
+        - TS_DUAL_LANE_PROD_PIPELINE
+        - UK_DUAL_LANE
         - UK_DUAL_LANE_LAPTOPLOAD
-        - DE_PRODUCTION_PROD_PIPELINE
-      
-jobs:
+        - UK_DUAL_LANE_PIPELINE
+        - UK_DUAL_LANE_PIPELINE_DC
+        - UK_DUAL_LANE_PROD_PIPELINE
+        - UK_DUAL_LANE_PROD_PIPELINE_LAB1
+        - UK_UBER_EATS_PIPELINE
+        - US_DUAL_LANE
+        - US_DUAL_LANE_LAPTOPLOAD
+        - US_DUAL_LANE_NPOS_29235_PROD_PIPELINE
+        - US_DUAL_LANE_NP_API
+        - US_DUAL_LANE_NP_API_MICROSERVICES
+        - US_DUAL_LANE_PIPELINE
+        - US_DUAL_LANE_PROD_PIPELINE
+        - US_DUAL_LANE_PROD_PIPELINE2
+        - US_DUAL_LANE_PROD_PIPELINE3
+        - US_DUAL_LANE_PROD_PIPELINE_LAB1
+        - US_DUAL_LANE_PROD_PIPELINE_LAB2
+        - US_DUAL_LANE_PROD_PIPELINE_LAB3
+        - US_DUAL_LANE_PROD_PIPELINE_NEW
+        - US_SINGLE_LANE_PIPELINE
 
-CreateLab:
-   runs-on: [ ]
-   
+      vlabconfig_input:
+        description: 'If the configuration is not in the list above, write it here.'
+        required: false
