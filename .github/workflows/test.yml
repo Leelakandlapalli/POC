@@ -63,3 +63,7 @@ on:
       vlabconfig_input:
         description: 'If the configuration is not in the list above, write it here.'
         required: false
+jobs:
+
+  CreateLab:
+    runs-on: ubuntu-latest
