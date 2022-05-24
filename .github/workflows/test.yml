@@ -2,7 +2,7 @@ name: Digital order vlab Pipeline
 
 on:
    workflow_dispatch:
-   input:
+  
      vlabconfig_list: 
        description: 'Choose vlab configuration from the list.'
        type: choice
